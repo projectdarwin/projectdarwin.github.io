@@ -11,6 +11,10 @@ $(document).ready(function(){
 		}
 	});
 
+	$("#collapseToggle").click(function(){
+		("#myNavbar").collapse("toggle");
+	});
+	
 	$("#pilab-btn").click(function(){
 		if($("#pilab").on("shown.bs.collapse")== true)
 		{
