@@ -14,6 +14,72 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
+    <script type="text/javascript">
+<!--
+<script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject.js"></script>
+<script type="text/javascript">
+<!--
+function GetUnity() {
+  if (typeof unityObject != "undefined") {
+    return unityObject.getObjectById("unityPlayer");
+  }
+  return null;
+}
+if (typeof unityObject != "undefined") {
+  unityObject.embedUnity("unityPlayer", "darwin.unity3d", 480, 320);
+  
+}
+-->
+</script>
+<style type="text/css">
+<!--
+body {
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+a:link, a:visited {
+  color: #000;
+}
+a:active, a:hover {
+  color: #666;
+}
+p.header {
+  font-size: small;
+}
+p.header span {
+  font-weight: bold;
+}
+p.footer {
+  font-size: x-small;
+}
+div.content {
+  margin: auto;
+  width: 480px;
+}
+div.missing {
+  margin: auto;
+  position: relative;
+  top: 50%;
+  width: 193px;
+}
+div.missing a {
+  height: 63px;
+  position: relative;
+  top: -31px;
+}
+div.missing img {
+  border-width: 0px;
+}
+div#unityPlayer {
+  cursor: default;
+  height: 320px;
+  width: 480px;
+}
+-->
+</style>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,7 +93,7 @@
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <button class="navbar-toggle collapsed" aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -37,22 +103,29 @@
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id = "myNavbar" >
+          <div id = "navbar" class="collapse navbar-collapse" aria-expanded="false" style="height: 0.8px">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="bio.html">Bio</a></li>
               <li><a href="coursework.html">Coursework and Work History</a></li>
-              <li><a href="game.html">Darwin</a></li>
+              <li class="active"><a href="game.html">Darwin<span class="sr-only">(current)</span></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
-    <p> blah</p>
+      <div>
+        <object id="UnityObject" classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
+        width="420" height="750"
+        codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
+ <param name="unity3d" value="WebPlayer.unity3d" />
+ <embed id="UnityEmbed" src="darwin/darwin.unity3d" width="1000" height="750"
+  type="application/vnd.unity" pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
+ </object>
+      </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="webpage.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
   </body>
 </html>
